@@ -1,4 +1,5 @@
 <html>
+<head>
 <style>
   * {box-sizing:border-box}
   .carousel {display: none}
@@ -6,39 +7,35 @@
 /* Slideshow container */
 .slideshow-container {
   max-width: 1200px;
-  max-height: 400px;
+  max-height: 300px;
   position: relative;
   margin: auto;
 }
-
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
   position: absolute;
   top: 50%;
   width: auto;
-  margin-top: -22px;
+  margin-top: 20%;
   padding: 16px;
-  color: white;
+  color: #ffffff;
+  background-color: black;
   font-weight: bold;
   font-size: 25px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
 }
-
 /* Position the "next button" to the right */
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
-
 /* On hover, add a brown background color with a little bit see-through */
 .prev:hover, .next:hover {
   background-color: rgba(86,65,37,0.8);
 }
-
-
 /* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
@@ -50,28 +47,22 @@
   display: inline-block;
   transition: background-color 0.6s ease;
 }
-
 .active, .dot:hover {
   background-color: #717171;
 }
-
 /* Fading animation */
 .fade {
   animation-name: fade;
   animation-duration: 1.5s;
 }
-
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
 }
 </style>
 </head>
-
-<!-- src="http://studentwork.prattsi.org/bookarts/wp-content/uploads/sites/36/2024/11/Screenshot-2024-11-23-at-12.33.49-PM-e1732385931279-1024x610.png" alt="A webpage layout" -->
-
+<body>
 <div class="slideshow-container">
-
   <!-- images in the carousel -->
   <div class="carousel fade">
     <img src="https://studentwork.prattsi.org/bookarts/wp-content/uploads/sites/36/2024/11/object_type_tsne_scatterplot-e1732433268142-1024x619.png" alt="A colorful scatterplot" class="wp-image-224" style="width:100%">
@@ -98,7 +89,6 @@
   <a class="next" onclick="plusSlides(1)">&#10095;</a>
 </div>
 <br>
-
 <!-- The dots/circles -->
 <div style="text-align:center">
   <span class="dot" onclick="currentSlide(1)"></span>
@@ -107,19 +97,16 @@
   <span class="dot" onclick="currentSlide(4)"></span>
   <span class="dot" onclick="currentSlide(5)"></span>
 </div>
-
+</body>
 <script>
   let slideIndex = 1;
 showSlides(slideIndex);
-
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
-
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }
-
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("carousel");
